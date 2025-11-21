@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: rgb(148, 148, 148);
+            text-align: center; 
+            background-color: #f09e9e;    
+            border-radius: 0.50rem;     
+            max-width: auto;  
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            max-width: 400px;
+            min-height: 240px;
+            background-color: #272727;
+            border-radius: 0.50rem;
+            padding: 20px;
+            box-shadow: 2px 2px 2px 2px ;
+        }
+        
+        .p {
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Weather App from scratch</h1>
+    <div class="main"> <!-- Main container -->
+
+        <div class="card">  <!-- Card container -->
+            <h3>Current Weather in Paris</h1>
+            <p class="OutputWeather" >Temperature: <span id="temperature">-- °C </span></p>
+            <p> Vent: <span id="windSpeed">-- km/h</span></p>
+            <p>Direction: <span id="windDirection">--</span></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
