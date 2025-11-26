@@ -3,9 +3,9 @@
     const URL = "https://api.open-meteo.com/v1/forecast?latitude=48.85&longitude=2.35&current_weather=true"; // API URL
 
     fetch(URL)
-    .then(response => { // Response de l'API 
-        console.log("Response : ", response); //
-        return response.json() // On unwrap le packet json        
+    .then(response => { // API Response 
+        console.log("Response : ", response);
+        return response.json() // unwrap json package        
     })
 
    .then(data => { 
