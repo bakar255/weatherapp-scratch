@@ -7,3 +7,5 @@ Build a weather application twice: first with vanilla JavaScript to master funda
 ## Project Overview
 
 A responsive weather app that displays real-time conditions using the Open-Meteo API. The vanilla version focuses on core web technologies - fetch API, DOM manipulation, and browser geolocation. The Next.js version implements the same features using React hooks, TypeScript interfaces, and server-side rendering capabilities, providing a comparison between traditional and modern web development approaches.
+
+![WeatherappImage](image.PNG)
