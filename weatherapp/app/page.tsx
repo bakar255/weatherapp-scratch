@@ -9,6 +9,7 @@ export default function WeatherApp() {
   const [WeatherData, setWeatherData] = useState("");
   const [Latitude, setLatitude] = useState(0);
   const [Longitude, setLongitude] = useState(0);
+  const [Loading, setLoading] = useState(false);
   
   // Function to fetch weather
   const FetchWeather = async () => {
@@ -20,6 +21,7 @@ export default function WeatherApp() {
       const response = await fetch(URL);
       const data = await response.json();
 
+      setLoading(true);
       setWeatherData(data);
       console.log(data);
 
@@ -108,6 +110,7 @@ const getWeatherIcon = (code) => {
     }
   }, [Latitude, Longitude]);
 
+
   return (
 
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-black justify-center items-center p-4">
@@ -135,7 +138,7 @@ const getWeatherIcon = (code) => {
     {WeatherData?.current?.temperature_2m || "--"}°
   </span>
   <span className="text-gray-300 text-lg mt-2 block">
-    {getWeatherDescription(WeatherData?.current?.weather_code)}
+    {getWeatherDescription(WeatherData?.current?.weather_code || "--")}
   </span>
 </div>
 
